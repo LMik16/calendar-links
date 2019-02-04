@@ -63,6 +63,10 @@ class Link
      *
      * @return static
      * @throws InvalidLink
+     * https://stackoverflow.com/questions/37460592/why-return-new-static-php
+     * Having a static method on a class which returns a new instance of same is an alternative constructor.
+     * Having an alternative constructor allows you to provide different defaults, or convenience shortcuts to 
+     * instantiate this class without having to supply those specific arguments and/or for being able to provide different arguments
      */
     public static function create(string $title, DateTime $from, DateTime $to, bool $allDay = false)
     {
